@@ -173,7 +173,7 @@ class Main extends Component {
                     <li>
                       <a target={item.policy === "newTab" ? "_blank" : ""} rel="noopener noreferrer" href={item.link}>
                         {
-                          item.translation.hasOwnProperty(language) ?
+                          item.translation[language] ?
                             item.translation[language] :
                             item.translation['de']
                         }

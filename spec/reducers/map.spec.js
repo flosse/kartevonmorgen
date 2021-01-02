@@ -4,7 +4,7 @@
 
   describe("map reducer", function() {
     var Actions, R;
-    R = require("../../src/reducers/map");
+    R = require("../../src/reducers/map").default;
     Actions = require("../../src/Actions");
     it("should be a function", function() {
       return R.should.be.a("function");

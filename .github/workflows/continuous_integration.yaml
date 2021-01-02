@@ -89,3 +89,6 @@ jobs:
 
       - name: Build project
         run: yarn run pack
+
+      - name: Test project
+        run: yarn test
