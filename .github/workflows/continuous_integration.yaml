@@ -82,7 +82,7 @@ jobs:
             ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
             ${{ runner.os }}-cargo
 
-      - name: Install dependencies
+      - name: Install Node dependencies
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
@@ -92,3 +92,12 @@ jobs:
 
       - name: Test project
         run: yarn test
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
