@@ -48,6 +48,10 @@ const config = {
                 jsx: true,
                 decorators: true,
               }
+            },
+            env: {
+              mode: "usage",
+              coreJs: 3
             }
           }
         }
@@ -64,6 +68,10 @@ const config = {
                 tsx: true,
                 decorators: true,
               }
+            },
+            env: {
+              mode: "usage",
+              coreJs: 3
             }
           }
         }
