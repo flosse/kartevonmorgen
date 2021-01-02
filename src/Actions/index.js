@@ -1,5 +1,7 @@
-import clientActions  from "./client";
-import serverActions  from "./server";
+import * as clientActions from "./client";
+export * from "./client";
+import * as serverActions from "./server";
+export * from "./server";
 
 export default {
   ...clientActions, 

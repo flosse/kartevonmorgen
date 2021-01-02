@@ -1,8 +1,6 @@
 import chai from "chai";
 import V    from "../../src/util/validation";
 
-import 'babel-polyfill';
-
 chai.should();
 
 describe("Validation", () => {

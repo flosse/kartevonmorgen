@@ -12,19 +12,19 @@ import Swipeable                      from 'react-swipeable'
 import styled, { createGlobalStyle }  from "styled-components";
 import isString from "lodash/isString"
 
-import V                    from "../constants/PanelView"
-import Actions              from "../Actions"
-import Modal                from "./pure/Modal"
-import Map                  from "./Map"
-import Sidebar              from "./Sidebar"
-import LandingPage          from "./LandingPage"
-import { EDIT }             from "../constants/Form"
-import STYLE, {pink}                from "./styling/Variables"
+import V                       from "../constants/PanelView"
+import * as Actions            from "../Actions"
+import Modal                   from "./pure/Modal"
+import Map                     from "./Map"
+import Sidebar                 from "./Sidebar"
+import LandingPage             from "./LandingPage"
+import { EDIT }                from "../constants/Form"
+import STYLE, { pink }         from "./styling/Variables"
 import { NUM_ENTRIES_TO_SHOW } from "../constants/Search"
-import mapConst             from "../constants/Map"
-import {getIcon}           from "../customizations/icons"
-import i18n from "../i18n"
-import {initialize} from "redux-form"
+import mapConst                from "../constants/Map"
+import {getIcon}               from "../customizations/icons"
+import i18n                    from "../i18n"
+import {initialize}            from "redux-form"
 
 
 class Main extends Component {
@@ -397,7 +397,7 @@ Main.propTypes = {
   timedActions :  T.object.isRequired
 };
 
-module.exports = translate('translation')(Main)
+export default translate('translation')(Main)
 
 /* Moved all styles here. TODO: Move to right components */
 const GlobalStyle = createGlobalStyle`
